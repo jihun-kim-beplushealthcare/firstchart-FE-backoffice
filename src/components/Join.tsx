@@ -1,6 +1,6 @@
+import { IAddAccount } from "@/interface/IAccount";
 import styled from "@emotion/styled";
 import React, { useState } from "react";
-import { IAddAccount } from "../interface/IAccount";
 
 type JoinContainerType = {
   label: string;

@@ -1,21 +1,31 @@
 import styled from "@emotion/styled";
-import MenuList from "./MenuList";
 import { useState } from "react";
+import MenuList from "./MenuList";
 
 const testMenu = [
   {
     id: 1,
-    title: "1",
+    title: "문진",
     subList: ["1-1", "1-2", "1-3"],
   },
   {
     id: 2,
-    title: "2",
+    title: "발송",
     subList: ["2-1", "2-2", "2-3"],
   },
   {
     id: 3,
-    title: "3",
+    title: "계정 / 권한",
+    subList: ["3-1", "3-2", "3-3"],
+  },
+  {
+    id: 4,
+    title: "통계",
+    subList: ["3-1", "3-2", "3-3"],
+  },
+  {
+    id: 5,
+    title: "정보",
     subList: ["3-1", "3-2", "3-3"],
   },
 ];

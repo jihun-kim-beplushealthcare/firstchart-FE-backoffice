@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import React from "react";
-import useTeamStore from "../store/useTeamStore";
-import { MenuType } from "../interface/IMenu";
 import MenuItem from "./MenuItem";
+import useTeamStore from "@/store/useTeamStore";
+import { MenuType } from "@/interface/IMenu";
 
 const menuItem = ["menu1", "menu2", "menu3"];
 

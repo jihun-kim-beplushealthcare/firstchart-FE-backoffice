@@ -1,8 +1,7 @@
-import "./App.css";
+import MenuController from "@components/MenuController";
 import Layout from "./Layout";
-import LoginTimer from "./components/LoginTimer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MenuController from "./components/MenuController";
+import LoginTimer from "@components/LoginTimer";
 
 function App() {
   return (

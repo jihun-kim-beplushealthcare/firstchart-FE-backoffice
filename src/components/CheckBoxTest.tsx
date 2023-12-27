@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import CheckBoxList from "./CheckBoxList";
-import useTeamStore from "../store/useTeamStore";
-import { MenuType } from "../interface/IMenu";
 import { useRef } from "react";
+import useTeamStore from "@/store/useTeamStore";
+import { MenuType } from "@/interface/IMenu";
 
 export default function CheckBoxTest() {
   const { operatorTeam, setOperatorTeam } = useTeamStore();
