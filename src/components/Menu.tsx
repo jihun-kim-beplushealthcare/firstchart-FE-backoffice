@@ -34,6 +34,7 @@ export default function Menu() {
   const [currentMenu, setCurrentMenu] = useState<string>("");
 
   function handleMenuClick(title: string) {
+    if (title === currentMenu) return setCurrentMenu("");
     setCurrentMenu(title);
   }
 
@@ -54,7 +55,6 @@ export default function Menu() {
 }
 
 const MenuWrapper = styled.nav`
-  width: 240px;
   padding: 16px 24px;
   border-right: 1px solid #e6eaec;
   list-style: none;
