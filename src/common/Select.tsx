@@ -78,7 +78,7 @@ const SelectWrapper = styled.div<WrapperType>`
 
     .select {
       width: ${(props) => props.width};
-      height: 40px;
+      height: 44px;
       border: 1px solid ${(props) => props.theme.colors.coolGray300};
       border-radius: ${(props) => props.theme.radius.radius_md};
       padding-left: 16px;

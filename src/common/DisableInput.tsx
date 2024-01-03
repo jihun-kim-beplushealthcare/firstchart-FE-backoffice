@@ -10,7 +10,7 @@ export default function DisableInput({ label, width, placeholder }: Props) {
   return (
     <DisableInputWrapper width={width}>
       {label && <div className="label label3">{label}</div>}
-      <input type="text" className="input" placeholder={placeholder} />
+      <input type="text" className="input" disabled placeholder={placeholder} />
     </DisableInputWrapper>
   );
 }
@@ -31,7 +31,7 @@ const DisableInputWrapper = styled.div<StyledType>`
 
   .input {
     width: ${(props) => props.width};
-    height: 40px;
+    height: 42px;
     background-color: ${(props) => props.theme.colors.trueGray025};
     border-radius: ${(props) => props.theme.radius.radius_md};
     border: 1px solid ${(props) => props.theme.colors.trueGray200};

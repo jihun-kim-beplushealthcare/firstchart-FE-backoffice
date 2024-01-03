@@ -1,13 +1,24 @@
 import styled from "@emotion/styled";
 import DisableInput from "./DisableInput";
+import { useState } from "react";
 
 export default function PhoneInput() {
+  const [phoneCheck, setPhoneCheck] = useState<boolean>(false);
+
+  function handlePhoneCheckButton() {
+    setPhoneCheck(true);
+  }
+
   return (
     <PhoneInputWrapper>
       <div className="label3 label">회원정보</div>
       <div className="check">
-        <button className="checkPhoneButton">휴대폰 본인인증</button>
-        <div className="successCheck label3">인증되었습니다.</div>
+        <button className="checkPhoneButton" onClick={handlePhoneCheckButton}>
+          휴대폰 본인인증
+        </button>
+        {phoneCheck && (
+          <div className="successCheck label3">인증되었습니다.</div>
+        )}
       </div>
       <div className="inputs">
         <DisableInput placeholder="김유저" width="120px" />

@@ -7,6 +7,7 @@ type Props = {
   required: boolean;
   type: HTMLInputTypeAttribute;
   placeholder: string;
+  width: string;
   // handleChangeInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -15,10 +16,11 @@ export default function Input({
   required,
   type,
   placeholder,
+  width,
   // handleChangeInput,
 }: Props) {
   return (
-    <InputWrapper>
+    <InputWrapper width={width}>
       <div className="label label3">
         {label}
         {required && <img src={REQUIRED} alt="required" />}
@@ -28,7 +30,11 @@ export default function Input({
   );
 }
 
-const InputWrapper = styled.div`
+type Wrapper = {
+  width: string;
+};
+
+const InputWrapper = styled.div<Wrapper>`
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -40,8 +46,8 @@ const InputWrapper = styled.div`
 
   .input {
     padding: 0;
-    width: 320px;
-    height: 40px;
+    width: ${(props) => props.width};
+    height: 42px;
     border: 1px solid ${(props) => props.theme.colors.coolGray300};
     border-radius: ${(props) => props.theme.radius.radius_md};
 
